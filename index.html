@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>胸きゅん彼氏彼女シリーズ（プロトタイプ）</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 入口（年齢・トーン明示） -->
+<section id="screen-gate" class="screen active">
+  <div class="gate-box">
+    <p class="gate-logo">💌</p>
+    <h1>胸きゅん<br>彼氏彼女シリーズ</h1>
+    <p class="gate-sub">毎日届く、あなたの名前を呼んでくれる時間。</p>
+    <p class="gate-note">本サービスはAIによる「推し活エンタメ」です。<br>キャラクターは実在しません。18歳以上の方向け。</p>
+    <button id="btn-start" class="btn-primary">18歳以上です・はじめる</button>
+  </div>
+</section>
+
+<!-- キャラ選択 -->
+<section id="screen-select" class="screen">
+  <h2>どちらと話す？</h2>
+  <div id="char-cards"></div>
+</section>
+
+<!-- 名前・呼ばれ方 -->
+<section id="screen-name" class="screen">
+  <h2>呼んでほしい名前は？</h2>
+  <input id="input-name" type="text" maxlength="10" placeholder="名前 or ニックネーム">
+  <p class="label-sub">呼ばれ方</p>
+  <div id="suffix-chips"></div>
+  <p id="call-preview" class="call-preview"></p>
+  <button id="btn-name-ok" class="btn-primary" disabled>これでお願い</button>
+</section>
+
+<!-- メイン -->
+<section id="screen-main" class="screen">
+  <header id="main-header">
+    <div id="stage-badge"></div>
+    <div id="aff-wrap"><div id="aff-bar"></div></div>
+  </header>
+  <div id="char-stage">
+    <div id="avatar"></div>
+    <p id="char-name"></p>
+  </div>
+  <div id="talk-box">
+    <p id="talk-text"></p>
+    <div id="replies"></div>
+    <button id="btn-letter" class="btn-primary">💌 今日のムネキュン</button>
+    <button id="btn-more" class="btn-ghost">もう1通（プロト検証モード）</button>
+  </div>
+  <footer id="main-footer">
+    <button id="btn-reset" class="btn-tiny">最初からやり直す</button>
+  </footer>
+</section>
+
+<div id="fx-layer"></div>
+
+<script src="js/lines.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
